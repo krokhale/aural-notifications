@@ -1,13 +1,15 @@
 /* @flow */
 import * as ACTIONS from './auralNotificationActions';
 
-const { ADD_AURAL_NOTIFICATION } = ACTIONS;
+const { ADD_AURAL_NOTIFICATION, REMOVE_AURAL_NOTIFICATION } = ACTIONS;
 
-export default function(state, payload) {
-    switch (payload.type) {
+export default function(state = '', { type, payload }) {
+    switch (type) {
         case ADD_AURAL_NOTIFICATION:
             return payload;
-        default:
+        case REMOVE_AURAL_NOTIFICATION:
             return '';
+        default:
+            return state;
     }
 }
