@@ -1,6 +1,7 @@
 {
   "name": "aural-notifications",
   "version": "1.0.0",
+  "main": "dist/index.js",
   "modules": {
     "root": "dist"
   },
